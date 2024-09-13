@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DrivenEats</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <!--fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!--fontes-->
+  </head>
+  <body>
+    
+    <div class="header">
+      <H1 class="Nome">DrivenEats</H1>
+      <p class="subTitulo">Sua comida em 6 minutos</p>
+    </div><!--topo-->
+
+    <div class="content">
+      <H2 class="Titulo">Primeiro, seu prato</H2>
+      
+      <div class="box1">
+
+      <button class="Calabresa" onclick="selecionarPrato(this)">
+        <img class="prato" src="projeto__driven-eats__imagens/pf_calabresa.png"/>
+        <div class="container">
+        <h3 class="nomePrato">PF Calabresa</h3>
+        <p class="subPrato">
+          Um pouco de batata,
+          Calabresa e cebola
+        </p>
+        <p class="precoPrato">17.30</p>
+        </div>
+      </button><!--seletor-->
+
+      <button class="Carne" onclick="selecionarPrato(this)">
+        <img class="prato" src="projeto__driven-eats__imagens/pf_carne.jpg"/>
+        <div class="container">  
+        <h3 class="nomePrato">PF Carne</h3>
+        <p class="subPrato">
+          Um pouco de batata,
+          salada e um ovo
+        </p>
+        <p class="precoPrato">20.00</p>
+        </div>
+      </button><!--seletor-->
+
+      <button class="Frango" onclick="selecionarPrato(this)">
+        <img class="prato" src="projeto__driven-eats__imagens/pf_frango.jpg"/>
+        <div class="container">  
+        <h3 class="nomePrato">PF Frango</h3>
+        <p class="subPrato">
+          Um pouco de salada,
+          tomates e frango
+        </p>
+        <p class="precoPrato">18.00</p>
+        </div>
+      </button><!--seletor-->
+    </div><!--box-->
+
+    <H2 class="Titulo">Agora, sua bebida</H2>
+    
+    <div class="box2">
+
+    <button class="Coca-Cola" onclick="selecionarBebida(this)">
+      <img class="bebida" src="projeto__driven-eats__imagens/coca.png"/>
+      <div class="container">  
+      <h3 class="nomeBebida">Coca-Cola</h3>
+      <p class="subBebida">Lata 350ml</p>
+      <p class="precoBebida">6.80</p>
+      </div>
+    </button><!--seletor-->
+    
+    <button class="Fanta" onclick="selecionarBebida(this)">
+      <img class="bebida" src="projeto__driven-eats__imagens/fanta.png"/>
+      <div class="container">  
+      <h3 class="nomeBebida">Fanta</h3>
+      <p class="subBebida">Lata 350ml</p>
+      <p class="precoBebida">5.50</p>
+      </div>
+    </button><!--seletor-->
+
+    <button class="Suco" onclick="selecionarBebida(this)">
+      <img class="bebida" src="projeto__driven-eats__imagens/suco.png"/>
+      <div class="container">  
+      <h3 class="nomeBebida">Suco de Laranja</h3>
+      <p class="subBebida">Garrafa 300ml</p>
+      <p class="precoBebida">4.90</p>
+      </div>
+    </button><!--seletor-->
+  </div><!--box-->
+
+  <H2 class="Titulo">Por fim, sua Sobremesa</H2>
+ 
+  <div class="box3">
+
+  <button class="Brownie" onclick="selecionarDoce(this)">
+    <img class="doce" src="projeto__driven-eats__imagens/brownie.jpg"/>
+    <div class="container">  
+    <h3 class="nomeDoce">Brownie</h3>
+    <p class="subDoce">Apenas Brownie</p>
+    <p class="precoDoce">6.50</p>
+    </div>
+  </button><!--seletor-->
+
+  <button class="Mouse" onclick="selecionarDoce(this)">
+    <img class="doce" src="projeto__driven-eats__imagens/mouse.jpg"/>
+    <div class="container">  
+    <h3 class="nomeDoce">Mouse</h3>
+    <p class="subDoce">Apenas Mouse</p>
+    <p class="precoDoce">5.80</p>
+    </div>
+  </button><!--seletor-->
+
+  <button class="Pudim" onclick="selecionarDoce(this)">
+    <img class="doce" src="projeto__driven-eats__imagens/pudim.jpg"/>
+    <div class="container">  
+    <h3 class="nomeDoce">Pudim</h3>
+    <p class="subDoce">Apenas Pudim</p>
+    <p class="precoDoce">7.90</p>
+    </div>
+  </button><!--seletor-->
+</div><!--box-->
+
+    </div> <!--content-->
+    <div class="footer">
+      <button class="botaoRodape">
+        <p class="rodape">Selecione os 3 itens</p>
+        <p class="rodape">para fechar o pedido</p>
+      </button><!--botao-->
+
+      <button class="botao escondido" onclick="abrirPopup()">
+        <p class="rodape">Fechar pedido</p>
+      </button><!--botao-->
+    </div><!--rodapé-->
+    <!---->
+    <div class="PopUp none">
+      <div class="window">
+        <H1 class="top-popup">Confirme seu pedido</H1>
+        <div class="nomePreco">
+          <p class="detalhes">Produto + Preço</p>
+          <p class="detalhes">Produto + Preço</p>
+          <p class="detalhes">Produto + Preço</p>
+          <h1 class="TOTAL">TOTAL: 00.00</h1>
+        </div>
+        <a class="confirm" 
+        href="" 
+        target="_blank" 
+        onclick="Whatsapp()">
+        Tudo certo, pode pedir!</a>
+        <button class="cancelar" onclick="fecharPopup()">
+          Cancelar</button>
+      </div>
+    </div><!--popup-->
+    <!---->
+    <script src="script.js"></script>
+  </body>
+</html>
